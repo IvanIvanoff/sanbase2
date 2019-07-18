@@ -75,7 +75,7 @@ defmodule Sanbase.Timeline.TimelineEvent do
   end
 
   @doc """
-  Returns the generated eventsb by the activity of followed users.
+  Returns the generated events by the activity of followed users.
   The events can be paginated with time-based cursor pagination.
   """
   @spec events(%User{}, cursor_with_limit) :: {:ok, events_with_cursor} | {:error, String.t()}
