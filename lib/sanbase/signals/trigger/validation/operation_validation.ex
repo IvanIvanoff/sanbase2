@@ -38,6 +38,7 @@ defmodule Sanbase.Signal.Validation.Operation do
   def valid_percent_change_operation?(operation),
     do: {:error, "#{inspect(operation)} is not a valid percent change operation"}
 
+  @spec valid_absolute_value_operation?(any) :: :ok | {:error, <<_::64, _::_*8>>}
   def valid_absolute_value_operation?(%{above: above}) when is_valid_price(above), do: :ok
   def valid_absolute_value_operation?(%{below: below}) when is_valid_price(below), do: :ok
 
